@@ -22,7 +22,7 @@ endTime = endTime.strftime('%Y%m%d')
 startTime = startTime.strftime('%Y%m%d')
 
 def stock_table(stockCode):
-    if (len(re.findall('^60[0-9]{4}', stockCode)) > 0):
+    if (len(re.findall('^6[0-9]{5}', stockCode)) > 0):
         stRenew = '0' + stockCode
     else:
         stRenew = '1' + stockCode
@@ -68,7 +68,7 @@ def stock_renew(stockCode): #更新使用
 
     temp_date = temp[1:2]['日期'][1]
 
-    if (len(re.findall('^60[0-9]{4}', stockCode)) > 0):
+    if (len(re.findall('^6[0-9]{5}', stockCode)) > 0):
         stRenew = '0' + stockCode
     else:
         stRenew = '1' + stockCode
